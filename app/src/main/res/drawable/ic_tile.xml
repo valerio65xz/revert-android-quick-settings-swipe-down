@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Two horizontal arrows pointing in opposite directions, representing a swap -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Top arrow: pointing right -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M4,9 L16,9 L16,6 L21,10.5 L16,15 L16,12 L4,12 Z" />
+
+    <!-- Bottom arrow: pointing left -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M20,12 L8,12 L8,9 L3,13.5 L8,18 L8,15 L20,15 Z" />
+
+</vector>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QS Swapper</string>
+
+    <!-- QS Tile -->
+    <string name="tile_label">QS Swapper</string>
+    <string name="tile_subtitle_on">Inverted</string>
+    <string name="tile_subtitle_off">Normal</string>
+
+    <!-- Accessibility Service -->
+    <string name="accessibility_service_label">QS Swapper</string>
+    <string name="accessibility_description">Intercepts top-corner swipes to swap the Quick Settings and Notifications panels.</string>
+
+    <!-- Onboarding dialog — service not yet enabled -->
+    <string name="dialog_setup_title">Setup Required</string>
+    <string name="dialog_setup_message">QS Swapper needs the Accessibility Service to intercept swipe gestures.\n\nTap Enable, then find \"QS Swapper\" in the list and turn it on.</string>
+    <string name="dialog_setup_positive">Enable</string>
+
+    <!-- Onboarding dialog — service already running -->
+    <string name="dialog_ready_title">QS Swapper</string>
+    <string name="dialog_ready_message">Accessibility Service is active.\n\nUse the Quick Settings tile to toggle gesture inversion on or off.</string>
+</resources>
