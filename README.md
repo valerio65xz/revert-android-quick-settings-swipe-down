@@ -1,0 +1,1 @@
+# revert-android-quick-settings-swipe-down
