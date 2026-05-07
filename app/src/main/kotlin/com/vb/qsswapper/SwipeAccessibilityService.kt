@@ -1,7 +1,6 @@
 package com.vb.qsswapper
 
 import android.accessibilityservice.AccessibilityService
-import android.app.StatusBarManager
 import android.content.Context
 import android.content.SharedPreferences
 import android.graphics.PixelFormat
@@ -70,6 +69,8 @@ class SwipeAccessibilityService : AccessibilityService() {
                     true
                 }
                 MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+                    // Required for accessibility: fire performClick on a tap (no swipe triggered)
+                    if (!triggered) v.performClick()
                     triggered = false
                     true
                 }
@@ -89,14 +90,11 @@ class SwipeAccessibilityService : AccessibilityService() {
     }
 
     private fun expandNotifications() {
-        val sbm = getSystemService(Context.STATUS_BAR_SERVICE) as StatusBarManager
-        sbm.expandNotificationsPanel()
+        performGlobalAction(GLOBAL_ACTION_NOTIFICATIONS)
     }
 
-    @Suppress("DEPRECATION")
     private fun expandQuickSettings() {
-        val sbm = getSystemService(Context.STATUS_BAR_SERVICE) as StatusBarManager
-        sbm.expandSettingsPanel()
+        performGlobalAction(GLOBAL_ACTION_QUICK_SETTINGS)
     }
 
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {}
